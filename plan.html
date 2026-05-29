@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>План на 100 дней — Нейросети в жизни</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --violet: #7c3aed;
+    --raspberry: #be185d;
+    --blue: #0284c7;
+    --dark: #0f0a2e;
+    --bg: #f4f4ff;
+    --font-display: 'Oxanium', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--dark);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Sticky save-banner ── */
+  .save-banner {
+    background: linear-gradient(135deg, #1e1057 0%, #3b0764 100%);
+    color: #fff;
+    padding: 12px 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+  .save-banner strong { color: #c4b5fd; }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(160deg, #0f0a2e 0%, #1e1057 50%, #2e1065 100%);
+    padding: 48px 24px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(124,58,237,0.35) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(124,58,237,0.25);
+    border: 1px solid rgba(167,139,250,0.3);
+    color: #c4b5fd;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 8vw, 3.6rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    background: linear-gradient(140deg, #fff 0%, #c4b5fd 40%, #93c5fd 80%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .hero p {
+    color: rgba(255,255,255,0.55);
+    font-size: 15px;
+    max-width: 360px;
+    margin: 0 auto;
+    line-height: 1.55;
+    position: relative;
+  }
+
+  /* ── Main content ── */
+  .content {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 0 16px 120px;
+  }
+
+  /* ── Day block ── */
+  .day-block {
+    margin-top: 24px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(15,10,46,0.1);
+  }
+
+  .day-header {
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .day-header.violet { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+  .day-header.blue   { background: linear-gradient(135deg, #0284c7, #0369a1); }
+  .day-header.pink   { background: linear-gradient(135deg, #be185d, #9d174d); }
+  .day-header.teal   { background: linear-gradient(135deg, #0891b2, #0e7490); }
+  .day-header.purple { background: linear-gradient(135deg, #6d28d9, #5b21b6); }
+
+  .day-num {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: rgba(255,255,255,0.92);
+    line-height: 1;
+    white-space: nowrap;
+  }
+  .day-num span {
+    display: block;
+    font-size: 10px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-top: 1px;
+  }
+  .day-phase {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+  }
+
+  .day-items {
+    background: #fff;
+    padding: 8px 0 4px;
+  }
+  .day-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(15,10,46,0.06);
+  }
+  .day-item:last-child { border-bottom: none; }
+  .day-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .day-text {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: #1e1b4b;
+  }
+
+  /* ── Divider ── */
+  .section-divider {
+    text-align: center;
+    margin: 36px 0 0;
+    position: relative;
+  }
+  .section-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    height: 1px;
+    background: rgba(124,58,237,0.15);
+  }
+  .section-divider span {
+    position: relative;
+    background: var(--bg);
+    padding: 0 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: rgba(124,58,237,0.5);
+  }
+
+  /* ── Offer block ── */
+  .offer-wrap {
+    margin-top: 36px;
+    border-radius: 24px;
+    background: linear-gradient(160deg, #0f0a2e 0%, #1e1057 60%, #2d1b69 100%);
+    padding: 28px 20px 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(124,58,237,0.25);
+  }
+  .offer-wrap::before {
+    content: '';
+    position: absolute;
+    top: -40px; left: 50%;
+    transform: translateX(-50%);
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(124,58,237,0.4), transparent 70%);
+    pointer-events: none;
+  }
+  .offer-badge {
+    display: inline-block;
+    background: rgba(124,58,237,0.3);
+    border: 1px solid rgba(167,139,250,0.35);
+    color: #c4b5fd;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+    position: relative;
+  }
+  .offer-bridge {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 10px;
+    line-height: 1.5;
+    position: relative;
+  }
+  .offer-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-weight: 800;
+    line-height: .95;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 6px;
+    position: relative;
+  }
+  .offer-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #a78bfa, #67e8f9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+    position: relative;
+  }
+  .offer-date {
+    font-size: 13px;
+    color: rgba(255,255,255,0.45);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .offer-benefits {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .offer-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.45;
+  }
+  .offer-benefits li::before {
+    content: '✓';
+    flex-shrink: 0;
+    width: 20px; height: 20px;
+    background: rgba(124,58,237,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #c4b5fd;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 1px;
+  }
+
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+    position: relative;
+  }
+  .price-old {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.3);
+    text-decoration: line-through;
+  }
+  .price-new {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #a78bfa, #f0abfc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .price-note {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .spots-badge {
+    background: rgba(190,24,93,0.25);
+    border: 1px solid rgba(251,113,133,0.25);
+    color: #fda4af;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  /* ── CTA Button ── */
+  .cta-btn {
+    display: block;
+    width: 100%;
+    padding: 17px 24px;
+    background: linear-gradient(135deg, #7c3aed, #be185d);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: .01em;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.45);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform .15s, box-shadow .15s;
+  }
+  .cta-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 12px rgba(124,58,237,0.4);
+  }
+  .cta-note {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 10px;
+    position: relative;
+  }
+
+  /* ── Bottom safe area ── */
+  .bottom-pad { height: 32px; }
+</style>
+</head>
+<body>
+
+<!-- Sticky hint -->
+<div class="save-banner">
+  📌 Сохраните страницу в <strong>закладки браузера</strong> или сделайте скриншоты — план будет у вас всегда под рукой
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-badge">МК «Нейросети в жизни»</div>
+  <h1>План<br>на 100 дней</h1>
+  <p>Пошаговый план внедрения ИИ в вашу жизнь — с нуля до уверенного использования каждый день</p>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+  <!-- 0-10 дней -->
+  <div class="day-block" style="margin-top:28px">
+    <div class="day-header violet">
+      <div class="day-num">0–10<span>дни</span></div>
+      <div class="day-phase">Заведите привычку</div>
+    </div>
+    <div class="day-items">
+      <div class="day-item">
+        <div class="day-icon">📱</div>
+        <div class="day-text">Выберите один инструмент и открывайте его каждый день</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">❓</div>
+        <div class="day-text">Любой вопрос из жизни - сначала задайте нейросети</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">📁</div>
+        <div class="day-text">Создайте папку «Мои промпты» и сохраняйте ответы, которые сработали</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10-30 дней -->
+  <div class="day-block">
+    <div class="day-header blue">
+      <div class="day-num">10–30<span>дни</span></div>
+      <div class="day-phase">Подружитесь с ней</div>
+    </div>
+    <div class="day-items">
+      <div class="day-item">
+        <div class="day-icon">🤝</div>
+        <div class="day-text">Любую задачу сначала разберите с нейросетью, потом принимайте решение</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">🪪</div>
+        <div class="day-text">Расскажите ей про себя: кто вы, чем занимаетесь, что важно</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">💡</div>
+        <div class="day-text">Попросите «думай глубже» - качество ответов сразу вырастет</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 30-60 дней -->
+  <div class="day-block">
+    <div class="day-header pink">
+      <div class="day-num">30–60<span>дни</span></div>
+      <div class="day-phase">Освободите время</div>
+    </div>
+    <div class="day-items">
+      <div class="day-item">
+        <div class="day-icon">📝</div>
+        <div class="day-text">Выпишите 5 задач, которые повторяются каждую неделю</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">🔧</div>
+        <div class="day-text">Под каждую найдите свой промпт и сохраните его</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">🗑️</div>
+        <div class="day-text">Делегируйте рутину: планирование, тексты, поиск, анализ документов</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 60-80 дней -->
+  <div class="day-block">
+    <div class="day-header teal">
+      <div class="day-num">60–80<span>дни</span></div>
+      <div class="day-phase">Соберите свою библиотеку</div>
+    </div>
+    <div class="day-items">
+      <div class="day-item">
+        <div class="day-icon">🎭</div>
+        <div class="day-text">Дайте нейросети постоянные роли: ассистент, редактор, советник</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">🎓</div>
+        <div class="day-text">Используйте как наставника: «объясни мне это как преподаватель»</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">📚</div>
+        <div class="day-text">Сохраняйте всё, что работает — через месяц появится личная база промптов</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 80-100 дней -->
+  <div class="day-block">
+    <div class="day-header purple">
+      <div class="day-num">80–100<span>дни</span></div>
+      <div class="day-phase">ИИ как часть мышления</div>
+    </div>
+    <div class="day-items">
+      <div class="day-item">
+        <div class="day-icon">🧠</div>
+        <div class="day-text">Перед любым решением - сначала пройдитесь через нейросеть</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">👥</div>
+        <div class="day-text">Составьте свою команду ролей: ассистент, редактор, советник по задачам</div>
+      </div>
+      <div class="day-item">
+        <div class="day-icon">🚀</div>
+        <div class="day-text">Думать вместе с ИИ — это и есть главный навык нового времени</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="section-divider" style="margin-top:40px">
+    <span>Хотите пройти этот путь быстрее и с поддержкой?</span>
+  </div>
+
+  <!-- Offer -->
+  <div class="offer-wrap">
+    <div class="offer-badge">Только для участников МК</div>
+    <div class="offer-bridge">«План на 100 дней» — это для самостоятельной работы.<br>А есть вариант с поддержкой.</div>
+    <div class="offer-title">Практикум</div>
+    <div class="offer-subtitle">«Нейросети в жизни и работе»</div>
+    <div class="offer-date">8–11 июня · офлайн + онлайн</div>
+    <ul class="offer-benefits">
+      <li>4 дня живого обучения — с поддержкой, системно, с результатом каждый день</li>
+      <li>Освободите 10+ часов в неделю от рутины уже в первую неделю</li>
+      <li>Научитесь разговаривать с ИИ — она будет понимать вас с первого раза</li>
+      <li>Соберёте личную библиотеку промптов под ваши задачи</li>
+    </ul>
+    <div class="price-row">
+      <div class="price-old">7 900 ₽</div>
+      <div class="price-new">4 490 ₽</div>
+    </div>
+    <div class="price-note">если оплачиваете сегодня · позже цена будет выше</div>
+    <div class="spots-badge">🔴 Всего 30 мест — ограничено вместительностью зала</div>
+    <a href="#" class="cta-btn" id="cta-link">Записаться на практикум →</a>
+    <div class="cta-note">Безопасная оплата · Ответим на любые вопросы</div>
+  </div>
+
+  <div class="bottom-pad"></div>
+</div>
+
+</body>
+</html>
