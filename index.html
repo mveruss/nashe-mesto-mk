@@ -283,6 +283,7 @@ html, body { height:100%; overflow:hidden; scroll-snap-type: y mandatory; scroll
 .split {
   display:grid; grid-template-columns:1.3fr 0.7fr;
   height:100%;
+  padding-right:clamp(3rem,5vw,5rem);
 }
 .left-panel {
   position:relative; z-index:10;
@@ -292,6 +293,7 @@ html, body { height:100%; overflow:hidden; scroll-snap-type: y mandatory; scroll
 .right-panel {
   position:relative; z-index:2;
   display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
 }
 
 /* Full-width centered */
@@ -645,7 +647,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
    CAMP CARDS (два лагеря)
    ============================================================ */
 .camp-grid {
-  display:grid; grid-template-columns:1.3fr 0.7fr;
+  display:grid; grid-template-columns:1fr 1fr;
   gap:clamp(1rem,2vw,1.8rem); width:100%; max-width:940px;
 }
 .camp-card {
@@ -718,7 +720,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
    TWO-COL LIST (Дома / На работе)
    ============================================================ */
 .two-col-list {
-  display:grid; grid-template-columns:1.3fr 0.7fr;
+  display:grid; grid-template-columns:1fr 1fr;
   gap:clamp(.8rem,1.5vw,1.4rem);
 }
 .col-block { display:flex; flex-direction:column; gap:clamp(.5rem,.9vw,.8rem); }
@@ -1568,7 +1570,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="section-badge reveal">Шаг 1</div>
       <h2 class="slide-title reveal">Откройте ИИ<br>на телефоне</h2>
       <p class="lead reveal" style="margin-bottom:clamp(.8rem,1.5vw,1.4rem)">Наведите камеру на QR-код.<br>Откроется сайт. Это бесплатно,<br>без регистрации, работает без VPN.</p>
-      <div class="glass-card reveal" style="padding:.8rem 1.2rem;display:inline-flex;align-items:center;gap:.8rem">
+      <div class="glass-card reveal" style="padding:.8rem 1.2rem;display:inline-flex;align-items:center;gap:.8rem;align-self:flex-start;max-width:max-content">
         <span style="font-size:1.2rem">🌐</span>
         <span style="font-family:var(--font-display);font-size:clamp(1rem,1.6vw,1.35rem);font-weight:700;color:var(--violet)">chat.deepseek.com</span>
       </div>
@@ -1596,7 +1598,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="accent-bar"></div>
       <div class="section-badge reveal">Альтернатива</div>
       <h2 class="slide-title reveal">Не открылось?<br>Попробуйте этот</h2>
-      <div class="glass-card reveal" style="padding:.8rem 1.2rem;display:inline-flex;align-items:center;gap:.8rem">
+      <div class="glass-card reveal" style="padding:.8rem 1.2rem;display:inline-flex;align-items:center;gap:.8rem;align-self:flex-start;max-width:max-content">
         <span style="font-size:1.2rem">🤖</span>
         <span style="font-family:var(--font-display);font-size:clamp(1rem,1.6vw,1.35rem);font-weight:700;color:var(--violet)">chat.qwen.ai</span>
       </div>
@@ -1620,7 +1622,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
 <section class="slide" id="s32">
   <div class="bg-radial"></div>
   <div class="bg-grid"></div>
-  <div style="display:flex;flex-direction:column;height:100%;padding:clamp(1rem,2vw,1.8rem) clamp(2rem,5vw,5rem);gap:clamp(.5rem,.9vw,.8rem);position:relative;z-index:10;align-items:center">
+  <div style="display:flex;flex-direction:column;height:100%;padding:clamp(1rem,2vw,1.8rem) clamp(2rem,5vw,5rem);gap:clamp(1rem,1.8vw,1.5rem);position:relative;z-index:10;align-items:center;justify-content:center">
 
     <!-- Заголовок -->
     <div style="flex-shrink:0;text-align:center">
@@ -1629,7 +1631,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     </div>
 
     <!-- Телефон-макет -->
-    <div class="reveal" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0;width:100%">
+    <div class="reveal" style="flex-shrink:0;display:flex;align-items:center;justify-content:center;width:100%">
       <!-- Рамка телефона — компактная, по высоте контента -->
       <div style="
         width:clamp(300px,33vw,440px);
@@ -1708,7 +1710,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
 <section class="slide" id="s35">
   <div class="bg-radial"></div>
   <div class="bg-grid"></div>
-  <div style="display:flex;flex-direction:column;height:100%;padding:clamp(2rem,3.5vw,3rem) clamp(3.5rem,7vw,7rem);gap:clamp(.5rem,.9vw,.8rem);position:relative;z-index:10;align-items:center">
+  <div style="display:flex;flex-direction:column;height:100%;padding:clamp(2rem,3.5vw,3rem) clamp(3.5rem,7vw,7rem);gap:clamp(1rem,1.8vw,1.5rem);position:relative;z-index:10;align-items:center;justify-content:center">
 
     <!-- Заголовок -->
     <div style="flex-shrink:0;text-align:center">
@@ -1718,7 +1720,7 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     </div>
 
     <!-- Телефон-макет -->
-    <div class="reveal" style="flex:1;display:flex;align-items:center;justify-content:center;min-height:0;width:100%">
+    <div class="reveal" style="flex-shrink:0;display:flex;align-items:center;justify-content:center;width:100%">
       <!-- Рамка телефона — компактная, по высоте контента -->
       <div style="
         width:clamp(300px,33vw,440px);
@@ -1769,7 +1771,6 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
   <div class="bg-grid"></div>
   <div class="dark-glow"></div>
   <div class="centered">
-    <div class="section-badge-dark reveal">Блок 6 · Что дальше</div>
     <div class="block-num reveal">06</div>
     <h1 class="display-title-white reveal">План<br>на 100 дней</h1>
     <p class="lead-white reveal">Как уверенно интегрировать ИИ в вашу жизнь</p>
@@ -1962,12 +1963,12 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
 <section class="slide" id="s46">
   <div class="bg-radial"></div>
   <div class="bg-grid"></div>
-  <div style="display:flex;flex-direction:column;height:100%;padding:clamp(1.5rem,3vw,2.8rem) clamp(2rem,5vw,5rem);gap:clamp(.6rem,1.1vw,1rem);position:relative;z-index:10">
+  <div style="display:flex;flex-direction:column;height:100%;padding:clamp(2.8rem,5.5vw,5rem) clamp(2rem,5vw,5rem) clamp(1.5rem,3vw,2.8rem);gap:clamp(.6rem,1.1vw,1rem);position:relative;z-index:10">
     <div style="flex-shrink:0">
       <div class="section-badge reveal">Что вы заберёте</div>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.6rem);font-weight:800;letter-spacing:-.01em;text-transform:uppercase;color:var(--dark)" class="reveal">5 результатов спустя 4 дня</h2>
     </div>
-    <ul class="num-list reveal" style="flex:1;justify-content:center;font-size:clamp(1.1rem,1.85vw,1.55rem);gap:clamp(.9rem,1.6vw,1.5rem)">
+    <ul class="num-list reveal" style="flex:1;justify-content:center;font-size:clamp(1.4rem,2.4vw,2rem);gap:clamp(.9rem,1.6vw,1.5rem)">
       <li><span class="num-badge">01</span>Готовые запросы под ваши задачи - что написать нейросети, чтобы сразу получить нужный результат</li>
       <li><span class="num-badge">02</span>Нейросеть, которая знает вас: ваш ритм, задачи, приоритеты - не нужно объяснять каждый раз заново</li>
       <li><span class="num-badge">03</span>2-3 задачи из вашей жизни, которые вы решите прямо на практикуме</li>
@@ -2007,22 +2008,22 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(.7rem,1.3vw,1.2rem);flex:1" class="reveal">
       <div class="glass-card" style="padding:clamp(1.4rem,2.3vw,2.2rem)">
         <div style="font-family:var(--font-display);font-size:clamp(1.2rem,1.9vw,1.6rem);font-weight:800;color:var(--violet);text-transform:uppercase;margin-bottom:.5rem">День 1</div>
-        <div style="font-size:clamp(.9rem,1.4vw,1.2rem);color:rgba(15,10,46,0.72);line-height:1.45">Первые результаты: вы делаете, нейросеть помогает</div>
+        <div style="font-size:clamp(1.35rem,2.1vw,1.8rem);color:rgba(15,10,46,0.75);line-height:1.45">Первые результаты: вы делаете, нейросеть помогает</div>
       </div>
       <div class="glass-card" style="padding:clamp(1.4rem,2.3vw,2.2rem)">
         <div style="font-family:var(--font-display);font-size:clamp(1.2rem,1.9vw,1.6rem);font-weight:800;color:var(--blue);text-transform:uppercase;margin-bottom:.5rem">День 2</div>
-        <div style="font-size:clamp(.9rem,1.4vw,1.2rem);color:rgba(15,10,46,0.72);line-height:1.45">Как разговаривать с ИИ, чтобы она вас понимала с первого раза</div>
+        <div style="font-size:clamp(1.35rem,2.1vw,1.8rem);color:rgba(15,10,46,0.75);line-height:1.45">Как разговаривать с ИИ, чтобы она вас понимала с первого раза</div>
       </div>
       <div class="glass-card" style="padding:clamp(1.4rem,2.3vw,2.2rem)">
         <div style="font-family:var(--font-display);font-size:clamp(1.2rem,1.9vw,1.6rem);font-weight:800;color:var(--raspberry);text-transform:uppercase;margin-bottom:.5rem">День 3</div>
-        <div style="font-size:clamp(.9rem,1.4vw,1.2rem);color:rgba(15,10,46,0.72);line-height:1.45">Нейросеть знает вас + глубинное исследование за минуты</div>
+        <div style="font-size:clamp(1.35rem,2.1vw,1.8rem);color:rgba(15,10,46,0.75);line-height:1.45">Нейросеть знает вас + глубинное исследование за минуты</div>
       </div>
       <div class="glass-card" style="padding:clamp(1.4rem,2.3vw,2.2rem)">
         <div style="font-family:var(--font-display);font-size:clamp(1.2rem,1.9vw,1.6rem);font-weight:800;color:var(--cyan);text-transform:uppercase;margin-bottom:.5rem">День 4</div>
-        <div style="font-size:clamp(.9rem,1.4vw,1.2rem);color:rgba(15,10,46,0.72);line-height:1.45">Выпускной: собираем всё вместе, ваши результаты, следующий шаг</div>
+        <div style="font-size:clamp(1.35rem,2.1vw,1.8rem);color:rgba(15,10,46,0.75);line-height:1.45">Выпускной: собираем всё вместе, ваши результаты, следующий шаг</div>
       </div>
     </div>
-    <p style="font-size:clamp(1rem,1.4vw,1.15rem);color:rgba(15,10,46,0.38);font-style:italic;flex-shrink:0" class="reveal">Не попадёте на один из дней? Каждый день в записи - доступ месяц. Специально ограничили, чтобы вы не откладывали в долгий ящик.</p>
+    <p style="font-size:clamp(1.25rem,1.9vw,1.6rem);color:rgba(15,10,46,0.68);flex-shrink:0" class="reveal">Не попадёте на один из дней? Каждый день в записи - доступ месяц. Специально ограничили, чтобы вы не откладывали в долгий ящик.</p>
   </div>
 </section>
 
