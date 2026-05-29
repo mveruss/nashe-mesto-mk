@@ -319,6 +319,7 @@ html, body { height:100%; overflow:hidden; scroll-snap-type: y mandatory; scroll
   display:flex; align-items:center; justify-content:center;
   font-size: clamp(.9rem,1.2vw,1.1rem);
 }
+.check-list li .li-text { flex:1; min-width:0; }
 .hl { color: var(--violet); font-weight: 700; }
 .icon-violet { background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(124,58,237,.08)); color:#7c3aed; }
 .icon-pink   { background:linear-gradient(135deg,rgba(190,24,93,.15),rgba(190,24,93,.08));   color:#be185d; }
@@ -940,17 +941,17 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <h2 class="slide-title reveal">Сначала - немного того,<br>что я вижу изнутри.</h2>
       <ul class="check-list reveal">
         <li>
-          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="li-text">
           Я использую ИИ <strong>каждый день</strong> - в работе и при создании «Нашего места»
-        </li>
+        </span></li>
         <li>
-          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="li-text">
           Вижу, <strong>куда движется рынок</strong>. Изнутри, не из статей.
-        </li>
+        </span></li>
         <li>
-          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="li-text">
           Хочу передать это вам - чтобы <strong>практика сегодня имела смысл</strong>
-        </li>
+        </span></li>
       </ul>
     </div>
     <div class="right-panel">
@@ -1123,17 +1124,17 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <h2 class="slide-title reveal">На мировом рынке - та же картина.</h2>
       <ul class="check-list reveal">
         <li>
-          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span>
+          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><span class="li-text">
           Джек Дорси уволил <strong>40% штата</strong>. Акции выросли на 24%.
-        </li>
+        </span></li>
         <li>
-          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span>
+          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><span class="li-text">
           Goldman Sachs: ИИ заменит <strong>66% найма аналитиков</strong>
-        </li>
+        </span></li>
         <li>
-          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span>
+          <span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><span class="li-text">
           Таких решений - <strong>сотни каждый месяц</strong> по всему миру
-        </li>
+        </span></li>
       </ul>
     </div>
     <div class="right-panel" style="display:flex;align-items:center;justify-content:center">
@@ -1170,10 +1171,10 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="section-badge reveal">Контекст</div>
       <h2 class="slide-title reveal">Иллюзия стабильности рухнула</h2>
       <ul class="check-list reveal">
-        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Инфляция <strong>съедает сбережения</strong></li>
-        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Профессии обесцениваются <strong>быстрее, чем кажется</strong></li>
-        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Рабочих мест становится <strong>меньше</strong> - резюме больше</li>
-        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>Единственное, что нельзя забрать - <span class="hl">навыки</span></li>
+        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><span class="li-text">Инфляция <strong>съедает сбережения</strong></span></li>
+        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><span class="li-text">Профессии обесцениваются <strong>быстрее, чем кажется</strong></span></li>
+        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><span class="li-text">Рабочих мест становится <strong>меньше</strong> - резюме больше</span></li>
+        <li><span class="icon icon-pink"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><span class="li-text">Единственное, что нельзя забрать - <span class="hl">навыки</span></span></li>
       </ul>
     </div>
     <div class="right-panel">
@@ -1195,9 +1196,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="section-badge reveal">Вывод</div>
       <h2 class="slide-title reveal">ИИ - не тренд.<br>Это уже реальность.</h2>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Войти можно <strong>без технической подготовки</strong></li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Разрыв между теми, кто умеет, и теми, кто нет - <strong>растёт</strong></li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Лучший момент начать - <span class="hl">сейчас</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="li-text">Войти можно <strong>без технической подготовки</strong></span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="li-text">Разрыв между теми, кто умеет, и теми, кто нет - <strong>растёт</strong></span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="li-text">Лучший момент начать - <span class="hl">сейчас</span></span></li>
       </ul>
     </div>
     <div class="right-panel">
@@ -1294,9 +1295,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="section-badge reveal">Важно понять</div>
       <h2 class="slide-title reveal">ИИ - это<br>не поисковик.</h2>
       <ul class="check-list reveal">
-        <li><span class="icon icon-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span>Google находит информацию, а ИИ <strong>решает задачи</strong></li>
-        <li><span class="icon icon-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span>Вы описываете ситуацию - ИИ <strong>думает вместе с вами</strong></li>
-        <li><span class="icon icon-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span>Чем <strong>точнее объясните</strong> - тем лучше результат</li>
+        <li><span class="icon icon-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span><span class="li-text">Google находит информацию, а ИИ <strong>решает задачи</strong></span></li>
+        <li><span class="icon icon-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span><span class="li-text">Вы описываете ситуацию - ИИ <strong>думает вместе с вами</strong></span></li>
+        <li><span class="icon icon-blue"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></span><span class="li-text">Чем <strong>точнее объясните</strong> - тем лучше результат</span></li>
       </ul>
     </div>
     <div class="right-panel">
@@ -1349,11 +1350,11 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="section-badge reveal">Личный опыт</div>
       <h2 class="slide-title reveal">Вот что я делаю<br>с ИИ каждую неделю</h2>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><strong>Стратегические сессии</strong> для клиентов: повестка, анализ, структура решений</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><strong>Семейный врач:</strong> симптомы, вопросы к доктору, расшифровка анализов</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><strong>Юрист:</strong> договора, претензии, понять свои права</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><strong>Операционка «Нашего места»:</strong> тексты, контент, планы мероприятий</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><strong>Личный советник:</strong> планирование недели, разбор нестандартных ситуаций</li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="li-text"><strong>Стратегические сессии</strong> для клиентов: повестка, анализ, структура решений</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="li-text"><strong>Семейный врач:</strong> симптомы, вопросы к доктору, расшифровка анализов</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="li-text"><strong>Юрист:</strong> договора, претензии, понять свои права</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="li-text"><strong>Операционка «Нашего места»:</strong> тексты, контент, планы мероприятий</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span><span class="li-text"><strong>Личный советник:</strong> планирование недели, разбор нестандартных ситуаций</span></li>
       </ul>
     </div>
     <div class="right-panel">
@@ -1759,9 +1760,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div class="day-content">
       <div class="day-phase reveal">Заведите привычку</div>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>Выберите один инструмент и открывайте его <strong>каждый день</strong></li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>Любой вопрос из жизни - сначала задайте <strong>нейросети</strong></li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span>Создайте папку <strong>«Мои промпты»</strong> и сохраняйте ответы, которые сработали</li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="li-text">Выберите один инструмент и открывайте его <strong>каждый день</strong></span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="li-text">Любой вопрос из жизни - сначала задайте <strong>нейросети</strong></span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><span class="li-text">Создайте папку <strong>«Мои промпты»</strong> и сохраняйте ответы, которые сработали</span></li>
       </ul>
     </div>
   </div>
@@ -1781,9 +1782,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div class="day-content">
       <div class="day-phase reveal">Подружитесь с ней</div>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Любую задачу сначала <strong>разберите с нейросетью</strong>, потом принимайте решение</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Расскажите ей <strong>про себя</strong>: кто вы, чем занимаетесь, что важно</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Попросите <strong>«думай глубже»</strong> - качество ответов сразу вырастет</li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="li-text">Любую задачу сначала <strong>разберите с нейросетью</strong>, потом принимайте решение</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="li-text">Расскажите ей <strong>про себя</strong>: кто вы, чем занимаетесь, что важно</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="li-text">Попросите <strong>«думай глубже»</strong> - качество ответов сразу вырастет</span></li>
       </ul>
     </div>
   </div>
@@ -1803,9 +1804,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div class="day-content">
       <div class="day-phase reveal">Освободите время</div>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Выпишите <strong>5 задач</strong>, которые повторяются каждую неделю</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Под каждую найдите свой <strong>промпт</strong> и сохраните его</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>Делегируйте <strong>рутину:</strong> планирование, тексты, поиск, анализ документов</li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="li-text">Выпишите <strong>5 задач</strong>, которые повторяются каждую неделю</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="li-text">Под каждую найдите свой <strong>промпт</strong> и сохраните его</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span><span class="li-text">Делегируйте <strong>рутину:</strong> планирование, тексты, поиск, анализ документов</span></li>
       </ul>
     </div>
   </div>
@@ -1825,9 +1826,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div class="day-content">
       <div class="day-phase reveal">Соберите свою библиотеку</div>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Дайте нейросети постоянные <strong>роли:</strong> ассистент, редактор, советник</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Используйте как <strong>наставника:</strong> «объясни мне это как преподаватель»</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>Сохраняйте всё, что работает - появится <strong>личная база промптов</strong></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="li-text">Дайте нейросети постоянные <strong>роли:</strong> ассистент, редактор, советник</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="li-text">Используйте как <strong>наставника:</strong> «объясни мне это как преподаватель»</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span><span class="li-text">Сохраняйте всё, что работает - появится <strong>личная база промптов</strong></span></li>
       </ul>
     </div>
   </div>
@@ -1848,9 +1849,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div class="day-content">
       <div class="day-phase reveal">ИИ как часть мышления</div>
       <ul class="check-list reveal">
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Перед любым решением - сначала пройдитесь через <strong>нейросеть</strong></li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Составьте свою команду <strong>ролей:</strong> ассистент, редактор, советник</li>
-        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>Думать вместе с ИИ - это <span class="hl">главный навык нового времени</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span class="li-text">Перед любым решением - сначала пройдитесь через <strong>нейросеть</strong></span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span class="li-text">Составьте свою команду <strong>ролей:</strong> ассистент, редактор, советник</span></li>
+        <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span><span class="li-text">Думать вместе с ИИ - это <span class="hl">главный навык нового времени</span></span></li>
       </ul>
     </div>
   </div>
@@ -1916,9 +1917,9 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div class="right-panel" style="padding:clamp(1rem,2vw,2rem)">
       <div class="glass-card reveal" style="padding:clamp(1.2rem,2.2vw,2rem);width:100%">
         <ul class="check-list">
-          <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Начнёте <strong>экономить время</strong> на рутине - в жизни и в работе</li>
-          <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Нейросеть подстроится под вас - <strong>не нужно объяснять заново каждый раз</strong></li>
-          <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>Научитесь <strong>разговаривать с ИИ</strong> так, чтобы она вас понимала</li>
+          <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="li-text">Начнёте <strong>экономить время</strong> на рутине - в жизни и в работе</span></li>
+          <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="li-text">Нейросеть подстроится под вас - <strong>не нужно объяснять заново каждый раз</strong></span></li>
+          <li><span class="icon icon-violet"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span><span class="li-text">Научитесь <strong>разговаривать с ИИ</strong> так, чтобы она вас понимала</span></li>
         </ul>
       </div>
     </div>
