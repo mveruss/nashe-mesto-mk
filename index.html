@@ -2296,9 +2296,7 @@ slides.forEach((_, i) => {
 });
 
 function scrollToSlide(i) {
-  /* scrollIntoView конфликтует со scroll-snap — используем прямой scrollTo */
-  const scrollEl = document.scrollingElement || document.documentElement;
-  scrollEl.scrollTo({ top: slides[i].offsetTop, behavior: 'smooth' });
+  slides[i].scrollIntoView({ behavior: 'smooth' });
 }
 
 let currentIndex = 0;
