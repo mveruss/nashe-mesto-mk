@@ -163,10 +163,13 @@
   }
   .day-item:last-child { border-bottom: none; }
   .day-icon {
-    font-size: 1.25rem;
-    line-height: 1;
     flex-shrink: 0;
+    width: 18px;
+    height: 18px;
     margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .day-text {
     font-size: 14.5px;
@@ -394,7 +397,7 @@
 <!-- Content -->
 <div class="content">
 
-  <!-- 0-10 дней -->
+  <!-- 0-10 дней — иконка: молния (зап энергии, старт привычки) -->
   <div class="day-block" style="margin-top:28px">
     <div class="day-header violet">
       <div class="day-num">0–10<span>дни</span></div>
@@ -402,21 +405,21 @@
     </div>
     <div class="day-items">
       <div class="day-item">
-        <div class="day-icon">📱</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="day-text">Выберите один инструмент и открывайте его каждый день</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">❓</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="day-text">Любой вопрос из жизни - сначала задайте нейросети</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">📁</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
         <div class="day-text">Создайте папку «Мои промпты» и сохраняйте ответы, которые сработали</div>
       </div>
     </div>
   </div>
 
-  <!-- 10-30 дней -->
+  <!-- 10-30 дней — иконка: сообщение/чат (диалог с нейросетью) -->
   <div class="day-block">
     <div class="day-header blue">
       <div class="day-num">10–30<span>дни</span></div>
@@ -424,21 +427,21 @@
     </div>
     <div class="day-items">
       <div class="day-item">
-        <div class="day-icon">🤝</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div class="day-text">Любую задачу сначала разберите с нейросетью, потом принимайте решение</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">🪪</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div class="day-text">Расскажите ей про себя: кто вы, чем занимаетесь, что важно</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">💡</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
         <div class="day-text">Попросите «думай глубже» - качество ответов сразу вырастет</div>
       </div>
     </div>
   </div>
 
-  <!-- 30-60 дней -->
+  <!-- 30-60 дней — иконка: часы (освободить время) -->
   <div class="day-block">
     <div class="day-header pink">
       <div class="day-num">30–60<span>дни</span></div>
@@ -446,21 +449,21 @@
     </div>
     <div class="day-items">
       <div class="day-item">
-        <div class="day-icon">📝</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="day-text">Выпишите 5 задач, которые повторяются каждую неделю</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">🔧</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="day-text">Под каждую найдите свой промпт и сохраните его</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">🗑️</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
         <div class="day-text">Делегируйте рутину: планирование, тексты, поиск, анализ документов</div>
       </div>
     </div>
   </div>
 
-  <!-- 60-80 дней -->
+  <!-- 60-80 дней — иконка: закладка (личная библиотека) -->
   <div class="day-block">
     <div class="day-header teal">
       <div class="day-num">60–80<span>дни</span></div>
@@ -468,21 +471,21 @@
     </div>
     <div class="day-items">
       <div class="day-item">
-        <div class="day-icon">🎭</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="day-text">Дайте нейросети постоянные роли: ассистент, редактор, советник</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">🎓</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="day-text">Используйте как наставника: «объясни мне это как преподаватель»</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">📚</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0891b2" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg></div>
         <div class="day-text">Сохраняйте всё, что работает — через месяц появится личная база промптов</div>
       </div>
     </div>
   </div>
 
-  <!-- 80-100 дней -->
+  <!-- 80-100 дней — иконка: активность/пульс (ИИ как часть мышления) -->
   <div class="day-block">
     <div class="day-header purple">
       <div class="day-num">80–100<span>дни</span></div>
@@ -490,15 +493,15 @@
     </div>
     <div class="day-items">
       <div class="day-item">
-        <div class="day-icon">🧠</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <div class="day-text">Перед любым решением - сначала пройдитесь через нейросеть</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">👥</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <div class="day-text">Составьте свою команду ролей: ассистент, редактор, советник по задачам</div>
       </div>
       <div class="day-item">
-        <div class="day-icon">🚀</div>
+        <div class="day-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6d28d9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <div class="day-text">Думать вместе с ИИ — это и есть главный навык нового времени</div>
       </div>
     </div>
