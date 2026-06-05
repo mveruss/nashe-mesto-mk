@@ -519,20 +519,21 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
 }
 .nav-dots {
   position:fixed; right:clamp(1rem,2.5vw,2rem); top:50%; transform:translateY(-50%);
-  display:flex; flex-direction:column; gap:8px; z-index:100;
+  display:flex; flex-direction:column; gap:var(--nav-gap,8px); z-index:100;
 }
 .nav-dot {
-  position:relative;
-  width:8px; height:8px; border-radius:50%;
-  background:rgba(124,58,237,.2); cursor:pointer;
-  transition:all .25s ease; border:none; padding:0;
-  /* расширяем зону клика прозрачным отступом */
-  box-sizing:content-box;
-  outline: 8px solid transparent;
+  position:relative; flex-shrink:0;
+  width:var(--nav-dot,8px); height:var(--nav-dot,8px); border-radius:50%;
+  background:rgba(124,58,237,.25); background-clip:content-box;
+  cursor:pointer; border:none;
+  /* реальная кликабельная зона — прозрачный padding */
+  padding:5px; margin:-5px; box-sizing:content-box;
+  transition:background .25s ease, height .2s ease, border-radius .2s ease;
+  outline:none;
 }
 .nav-dot.active {
-  background:linear-gradient(135deg,#7c3aed,#0ea5e9);
-  height:24px; border-radius:4px;
+  background:linear-gradient(135deg,#7c3aed,#0ea5e9); background-clip:unset;
+  height:var(--nav-active,22px); border-radius:4px; padding-top:0; padding-bottom:0; margin-top:0; margin-bottom:0;
 }
 /* Мгновенный кастомный тултип — без браузерной задержки */
 .nav-dot::after {
@@ -2264,18 +2265,40 @@ const progress = document.getElementById('progress');
 const counter = document.getElementById('counter');
 const total = slides.length;
 
+/* Вычисляем размер точек так, чтобы все вписывались в 90vh */
+function computeDotSizes() {
+  const available = window.innerHeight * 0.90;
+  const n = total;
+  let dot = 8, gap = 8;
+  // Уменьшаем до тех пор, пока не вписывается
+  while (n * dot + (n - 1) * gap > available) {
+    if (gap > 3) gap--;
+    else if (dot > 3) dot--;
+    else break;
+  }
+  const active = Math.min(dot * 3, 22);
+  const root = document.documentElement;
+  root.style.setProperty('--nav-dot', dot + 'px');
+  root.style.setProperty('--nav-gap', gap + 'px');
+  root.style.setProperty('--nav-active', active + 'px');
+}
+computeDotSizes();
+window.addEventListener('resize', computeDotSizes);
+
 /* Строим точки навигации */
 slides.forEach((_, i) => {
   const btn = document.createElement('button');
   btn.className = 'nav-dot';
-  btn.dataset.num = i + 1;           // кастомный тултип через CSS ::after
+  btn.dataset.num = i + 1;
   btn.setAttribute('aria-label', 'Слайд ' + (i + 1));
   btn.addEventListener('click', () => scrollToSlide(i));
   navDots.appendChild(btn);
 });
 
 function scrollToSlide(i) {
-  slides[i].scrollIntoView({ behavior: 'smooth' });
+  /* scrollIntoView конфликтует со scroll-snap — используем прямой scrollTo */
+  const scrollEl = document.scrollingElement || document.documentElement;
+  scrollEl.scrollTo({ top: slides[i].offsetTop, behavior: 'smooth' });
 }
 
 let currentIndex = 0;
