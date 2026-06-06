@@ -1574,27 +1574,31 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
       <div class="accent-bar"></div>
       <div class="section-badge reveal">Кейс 3 · Поздравления</div>
       <h2 class="slide-title reveal" style="font-size:clamp(1.55rem,2.8vw,2.4rem)">Как написать поздравление, которое человек не забудет</h2>
-      <p style="font-size:clamp(1.05rem,1.65vw,1.35rem);color:rgba(15,10,46,0.55);line-height:1.48;margin-bottom:clamp(.8rem,1.4vw,1.3rem)" class="reveal">Шаблон не работает. А написать что-то личное... на это уходит час, и всё равно не то.</p>
-      <!-- Шаги как нумерованный список -->
-      <ul class="num-list reveal" style="margin-bottom:clamp(.8rem,1.4vw,1.3rem)">
-        <li>
-          <div class="num-badge">1</div>
-          <span style="font-size:clamp(1.05rem,1.65vw,1.35rem)">Нейросеть задаёт вопросы про человека - ты отвечаешь</span>
+      <p style="font-size:clamp(1.05rem,1.65vw,1.32rem);color:rgba(15,10,46,0.55);line-height:1.48;margin-bottom:clamp(.8rem,1.4vw,1.2rem)" class="reveal">День рождения уже сегодня, а ты в запаре. Выходит дежурное «желаю всего самого» - и сам понимаешь, что это не то.</p>
+      <!-- Тезисы с иконками -->
+      <ul class="reveal" style="list-style:none;display:flex;flex-direction:column;gap:clamp(.65rem,1.1vw,1rem);margin-bottom:clamp(.8rem,1.4vw,1.2rem)">
+        <!-- Тезис 1: интервьюер -->
+        <li style="display:flex;align-items:flex-start;gap:clamp(.65rem,1vw,.9rem)">
+          <span style="flex-shrink:0;width:clamp(30px,2.8vw,38px);height:clamp(30px,2.8vw,38px);border-radius:10px;background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(14,165,233,0.07));display:flex;align-items:center;justify-content:center;margin-top:.1em">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </span>
+          <span style="font-size:clamp(1.0rem,1.6vw,1.3rem);color:rgba(15,10,46,0.68);line-height:1.48">Нейросеть стала умным интервьюером: задавала наводящие вопросы и помогала доставать из памяти то, что сходу не вспоминается - характер, ценности, наши общие моменты.</span>
         </li>
-        <li>
-          <div class="num-badge">2</div>
-          <span style="font-size:clamp(1.05rem,1.65vw,1.35rem)">15 минут - и у неё готов портрет: что важно, через что прошёл</span>
+        <!-- Тезис 2: портрет -->
+        <li style="display:flex;align-items:flex-start;gap:clamp(.65rem,1vw,.9rem)">
+          <span style="flex-shrink:0;width:clamp(30px,2.8vw,38px);height:clamp(30px,2.8vw,38px);border-radius:10px;background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(14,165,233,0.07));display:flex;align-items:center;justify-content:center;margin-top:.1em">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </span>
+          <span style="font-size:clamp(1.0rem,1.6vw,1.3rem);color:rgba(15,10,46,0.68);line-height:1.48">Из этого складывался портрет: важные эпизоды, нужная интонация, внутренние шутки - вплоть до фраз вроде «Принцессы Нури», понятных только вам двоим.</span>
         </li>
-        <li>
-          <div class="num-badge">3</div>
-          <span style="font-size:clamp(1.05rem,1.65vw,1.35rem)">Пишет текст. Человек говорит: самое личное поздравление, которое получал</span>
+        <!-- Тезис 3: результат -->
+        <li style="display:flex;align-items:flex-start;gap:clamp(.65rem,1vw,.9rem)">
+          <span style="flex-shrink:0;width:clamp(30px,2.8vw,38px);height:clamp(30px,2.8vw,38px);border-radius:10px;background:linear-gradient(135deg,rgba(124,58,237,0.12),rgba(14,165,233,0.07));display:flex;align-items:center;justify-content:center;margin-top:.1em">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <span style="font-size:clamp(1.0rem,1.6vw,1.3rem);color:rgba(15,10,46,0.68);line-height:1.48">То, на что уходили часы переписывания, теперь укладывается в 30-60 минут. И это уже не разовый текст - а метод, который работает каждый раз.</span>
         </li>
       </ul>
-      <!-- Метрика -->
-      <div class="reveal" style="display:inline-flex;align-items:center;gap:.7rem;background:linear-gradient(135deg,rgba(124,58,237,0.08),rgba(14,165,233,0.05));border:1px solid rgba(124,58,237,0.18);border-radius:12px;padding:.6rem 1.2rem">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span style="font-size:clamp(.9rem,1.35vw,1.1rem);font-weight:600;color:var(--violet)">30-60 минут вместо нескольких часов</span>
-      </div>
     </div>
     <div class="right-panel" style="align-items:center;justify-content:center">
       <!-- Телефон с чатом -->
