@@ -1474,7 +1474,6 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
     <div style="flex-shrink:0">
       <div class="section-badge reveal" style="display:inline-block;margin-bottom:.3rem">Кейс 1 · Фото для Яндекс.Карт</div>
       <h2 style="font-family:var(--font-display);font-size:clamp(1.4rem,2.4vw,2rem);font-weight:800;color:var(--dark);letter-spacing:-.01em" class="reveal">Взяли 2 фото, снятые на телефон, и попросили ИИ сделать из них одно фото зала для Яндекс.Карт</h2>
-      <p style="font-size:clamp(1.1rem,1.7vw,1.4rem);color:rgba(15,10,46,0.6);font-style:italic;margin-top:.3rem" class="reveal">И вот что получили →</p>
     </div>
 
     <!-- Два фото «до» — рядом, крупно, без пустот -->
@@ -1487,6 +1486,14 @@ body.edit-mode .dark-slide [contenteditable="true"]:focus {
         <img src="./claude-design/dc-do2.JPG" alt="До — фото 2"
              style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
+    </div>
+
+    <!-- Подсказка внизу — указывает на следующий слайд -->
+    <div class="reveal" style="flex-shrink:0;text-align:center;padding:clamp(.4rem,.7vw,.6rem) 0">
+      <span style="display:inline-flex;align-items:center;gap:.55rem;font-family:var(--font-display);font-size:clamp(1.05rem,1.7vw,1.45rem);font-weight:800;color:var(--violet);letter-spacing:.01em">
+        И вот что получили
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+      </span>
     </div>
 
   </div>
